@@ -1,0 +1,22 @@
+name: Publish ThreeSixtyAppHeader
+
+on:
+  push:
+    branches:
+      - main
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - uses: volta-cli/action@v1
+      - uses: actions/setup-node@v3
+        with:
+          node-version: '16.x'
+          registry-url: 'https://registry.npmjs.org/'
+          scope: '@webpros'
+      - run: npm ci --no-audit --legacy-peer-deps
+      - run: npm run prePublish
+      - run: npm publish --access public
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}

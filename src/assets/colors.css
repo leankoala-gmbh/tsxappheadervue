@@ -1,0 +1,26 @@
+:root {
+  --tsxahBackground: #ffffff;
+  --tsxahText: #131313;
+  --tsxahPrimary: #4cccff;
+  --tsxahSecondary: #e77b35;
+  --tsxahPrimaryHover: #28aade;
+  --tsxahSecondaryHover: #e16b1f;
+  --tsxahSubtleHover: #f5f5f5;
+  --tsxahNavBorderHover: #003694;
+  --tsxahNavBorderActive: #003694;
+  --tsxahDDBackground: #ffffff;
+  --tsxahDDText: #222222;
+  --tsxahDDIcon: #565656;
+  --tsxahDDIconImportant: #CA3931;
+  --tsxahDDInfo: #737373;
+  --tsxahDDHoverBackground: #f1f1f1;
+  --tsxahDDHoverText: #3d3d3d;
+  --tsxahDDActiveText: #4cccff;
+  --tsxahDDActiveBackground: #ffffff;
+  --tsxahDots: #737373;
+  --tsxahDivider: #e7e7e7;
+  --tsxahLogo: #282828;
+  --tsxahChevron: #484848;
+  --tsxahChangelogColorRegular: #CA3931;
+  --tsxahChangelogColorHover: #9d1d15;
+}

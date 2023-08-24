@@ -1,0 +1,220 @@
+// Vitest Snapshot v1
+
+exports[`Language Selector component > Change language on Click 1`] = `
+<div
+  class="hover:bg-app-hover w-20 flex-shrink-0 justify-end flex items-start rounded"
+>
+  <button
+    aria-expanded="false"
+    aria-haspopup="true"
+    id="headlessui-menu-button-12"
+    type="button"
+  >
+    <div
+      class="flex items-center gap-2 cursor-pointer text-app-chevron h-10"
+    >
+      <div
+        class="text-primary-hover text-sm"
+      >
+        DEU
+      </div>
+      <svg
+        class="w-3"
+        viewBox="0 0 24 24"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          d="M7.41 8.58L12 13.17l4.59-4.59L18 10l-6 6l-6-6l1.41-1.42Z"
+          fill="currentColor"
+        />
+      </svg>
+    </div>
+  </button>
+  <transition-stub>
+    <!---->
+  </transition-stub>
+</div>
+`;
+
+exports[`Language Selector component > Mount LanguageSelector component 1`] = `
+<div
+  class="hover:bg-app-hover w-20 flex-shrink-0 justify-end flex items-start rounded"
+>
+  <button
+    aria-controls="headlessui-menu-items-3"
+    aria-expanded="true"
+    aria-haspopup="true"
+    id="headlessui-menu-button-1"
+    type="button"
+  >
+    <div
+      class="flex items-center gap-2 cursor-pointer text-app-chevron h-10"
+    >
+      <div
+        class="text-primary-hover text-sm"
+      >
+        ENG
+      </div>
+      <svg
+        class="w-3"
+        viewBox="0 0 24 24"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          d="M7.41 8.58L12 13.17l4.59-4.59L18 10l-6 6l-6-6l1.41-1.42Z"
+          fill="currentColor"
+        />
+      </svg>
+    </div>
+  </button>
+  <transition-stub>
+    <div
+      aria-labelledby="headlessui-menu-button-1"
+      class="origin-top-right absolute right-0 top-[65px] w-48 rounded-md shadow-lg bg-dropdown-background ring-1 ring-black ring-opacity-5 focus:outline-none overflow-hidden"
+      id="headlessui-menu-items-3"
+      role="menu"
+      tabindex="0"
+    >
+      
+      <a
+        class="block py-2 px-4 text-sm cursor-pointer text-dropdown-text hover:bg-dropdown-hoverBackground hover:text-dropdown-hoverText transition ease-in-out duration-150 flex items-center bg-dropdown-activeBackground"
+        disabled="false"
+        id="headlessui-menu-item-4"
+        role="menuitem"
+        tabindex="-1"
+      >
+        <span
+          class="w-6"
+        >
+          <svg
+            class="w-4 h-4 text-dropdown-icon"
+            viewBox="0 0 24 24"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M9 16.17L5.53 12.7a.996.996 0 1 0-1.41 1.41l4.18 4.18c.39.39 1.02.39 1.41 0L20.29 7.71a.996.996 0 1 0-1.41-1.41L9 16.17z"
+              fill="currentColor"
+            />
+          </svg>
+        </span>
+        <span>
+          English
+        </span>
+      </a>
+      <a
+        class="block py-2 px-4 text-sm cursor-pointer text-dropdown-text hover:bg-dropdown-hoverBackground hover:text-dropdown-hoverText transition ease-in-out duration-150 flex items-center"
+        disabled="false"
+        id="headlessui-menu-item-5"
+        role="menuitem"
+        tabindex="-1"
+      >
+        <span
+          class="w-6"
+        >
+          <!--v-if-->
+        </span>
+        <span>
+          Deutsch
+        </span>
+      </a>
+      <a
+        class="block py-2 px-4 text-sm cursor-pointer text-dropdown-text hover:bg-dropdown-hoverBackground hover:text-dropdown-hoverText transition ease-in-out duration-150 flex items-center"
+        disabled="false"
+        id="headlessui-menu-item-6"
+        role="menuitem"
+        tabindex="-1"
+      >
+        <span
+          class="w-6"
+        >
+          <!--v-if-->
+        </span>
+        <span>
+          Русский
+        </span>
+      </a>
+      <a
+        class="block py-2 px-4 text-sm cursor-pointer text-dropdown-text hover:bg-dropdown-hoverBackground hover:text-dropdown-hoverText transition ease-in-out duration-150 flex items-center"
+        disabled="false"
+        id="headlessui-menu-item-7"
+        role="menuitem"
+        tabindex="-1"
+      >
+        <span
+          class="w-6"
+        >
+          <!--v-if-->
+        </span>
+        <span>
+          Español
+        </span>
+      </a>
+      <a
+        class="block py-2 px-4 text-sm cursor-pointer text-dropdown-text hover:bg-dropdown-hoverBackground hover:text-dropdown-hoverText transition ease-in-out duration-150 flex items-center"
+        disabled="false"
+        id="headlessui-menu-item-8"
+        role="menuitem"
+        tabindex="-1"
+      >
+        <span
+          class="w-6"
+        >
+          <!--v-if-->
+        </span>
+        <span>
+          Português (Brasil)
+        </span>
+      </a>
+      <a
+        class="block py-2 px-4 text-sm cursor-pointer text-dropdown-text hover:bg-dropdown-hoverBackground hover:text-dropdown-hoverText transition ease-in-out duration-150 flex items-center"
+        disabled="false"
+        id="headlessui-menu-item-9"
+        role="menuitem"
+        tabindex="-1"
+      >
+        <span
+          class="w-6"
+        >
+          <!--v-if-->
+        </span>
+        <span>
+          Français
+        </span>
+      </a>
+      <a
+        class="block py-2 px-4 text-sm cursor-pointer text-dropdown-text hover:bg-dropdown-hoverBackground hover:text-dropdown-hoverText transition ease-in-out duration-150 flex items-center"
+        disabled="false"
+        id="headlessui-menu-item-10"
+        role="menuitem"
+        tabindex="-1"
+      >
+        <span
+          class="w-6"
+        >
+          <!--v-if-->
+        </span>
+        <span>
+          Italiano
+        </span>
+      </a>
+      <a
+        class="block py-2 px-4 text-sm cursor-pointer text-dropdown-text hover:bg-dropdown-hoverBackground hover:text-dropdown-hoverText transition ease-in-out duration-150 flex items-center"
+        disabled="false"
+        id="headlessui-menu-item-11"
+        role="menuitem"
+        tabindex="-1"
+      >
+        <span
+          class="w-6"
+        >
+          <!--v-if-->
+        </span>
+        <span>
+          日本語
+        </span>
+      </a>
+      
+    </div>
+  </transition-stub>
+</div>
+`;

@@ -1,0 +1,27 @@
+// Vitest Snapshot v1
+
+exports[`App Navigation component > Mount AppNavigationLink component with User 1`] = `
+<a
+  class="h-full flex items-center"
+>
+  <span
+    class=""
+  >
+    Business
+  </span>
+  <!--v-if-->
+</a>
+`;
+
+exports[`App Navigation component > Mount AppNavigationLink component without User 1`] = `
+<a
+  class="h-full flex items-center"
+>
+  <span
+    class=""
+  >
+    Full Site Check
+  </span>
+  <!--v-if-->
+</a>
+`;

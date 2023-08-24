@@ -1,0 +1,83 @@
+{
+  "name": "@webpros/tsxappheadervue",
+  "version": "3.0.13",
+  "description": "AppHeader for 360 as VuePlugin",
+  "author": "Sascha Fuchs (sascha.fuchs@webpros.com)",
+  "contributors": [
+    "Jorge Flores",
+    "Viktor Vogel"
+  ],
+  "main": "dist/tsxAppHeader.js",
+  "style": "src/assets/colors.css",
+  "license": "MIT",
+  "engines": {
+    "node": "18.x"
+  },
+  "publishConfig": {
+    "registry": "https://registry.npmjs.org/"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/leankoala-gmbh/tsxAppHeader.git"
+  },
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "build:vue": "vite build",
+    "preview": "vite build && vite preview",
+    "start": "yarn dev & wait-on tcp:3000 -v",
+    "plop": "plop",
+    "vitest": "vitest run",
+    "vitest:watch": "vitest",
+    "vitest:coverage": "vitest run --coverage",
+    "generateCss": "postcss ./src/assets/style.css -o ./src/assets/output.css",
+    "prePublish": "npm run generateCss && npm run build",
+    "story:dev": "histoire dev",
+    "story:build": "histoire build",
+    "story:preview": "histoire preview"
+  },
+  "dependencies": {
+    "@headlessui/vue": "^1.7.14",
+    "@iconify/vue": "^3.2.1",
+    "@tailwindcss/container-queries": "^0.1.1",
+    "@vueuse/core": "^10.2.1",
+    "@vueuse/integrations": "^10.2.1",
+    "axios": "^0.27.2",
+    "container-query-polyfill": "^1.0.2",
+    "mitt": "^3.0.1",
+    "universal-cookie": "^4.0.4",
+    "vue": "^3.3.4"
+  },
+  "devDependencies": {
+    "@types/lodash": "^4.14.195",
+    "@typescript-eslint/eslint-plugin": "^5.61.0",
+    "@typescript-eslint/parser": "^5.61.0",
+    "@vitejs/plugin-vue": "^4.2.3",
+    "@vue/eslint-config-standard": "^7.0.0",
+    "@vue/eslint-config-typescript": "^11.0.3",
+    "@vue/test-utils": "^2.4.0",
+    "autoprefixer": "^10.4.14",
+    "c8": "^8.0.0",
+    "cssnano": "^6.0.1",
+    "eslint": "^8.44.0",
+    "eslint-config-prettier": "^8.8.0",
+    "eslint-plugin-import": "^2.27.5",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-promise": "^6.1.1",
+    "eslint-plugin-vue": "^9.15.1",
+    "jsdom": "^22.1.0",
+    "plop": "^3.1.2",
+    "postcss": "^8.4.25",
+    "postcss-cli": "^10.1.0",
+    "postcss-import": "^15.1.0",
+    "postcss-nested": "^6.0.1",
+    "tailwindcss": "^3.3.2",
+    "typescript": "^5.2.0-dev.20230707",
+    "unplugin-auto-import": "^0.16.6",
+    "unplugin-vue-components": "^0.25.1",
+    "vite": "^4.4.2",
+    "vite-plugin-vue-devtools": "^0.4.14",
+    "vitest": "^0.15.2",
+    "wait-on": "^6.0.1"
+  }
+}

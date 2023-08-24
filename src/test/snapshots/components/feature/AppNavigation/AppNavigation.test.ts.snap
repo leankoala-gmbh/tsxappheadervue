@@ -1,0 +1,217 @@
+// Vitest Snapshot v1
+
+exports[`App Navigation component > Mount AppNavigation component with User 1`] = `
+<nav
+  class="flex-auto w-full justify-start flex items-center h-16 text-app-text antialiased"
+  role="navigation"
+>
+  
+  <div
+    class="cursor-pointer font-semibold text-base leading-5 px-4 transition ease-in-out duration-300 relative h-full flex items-center navigation__link"
+  >
+    <a
+      class="h-full flex items-center"
+    >
+      <span
+        class=""
+      >
+        Dashboard
+      </span>
+      <!--v-if-->
+    </a>
+  </div>
+  <div
+    class="cursor-pointer font-semibold text-base leading-5 px-4 transition ease-in-out duration-300 relative h-full flex items-center navigation__link"
+  >
+    <a
+      class="h-full flex items-center"
+    >
+      <span
+        class=""
+      >
+        Servers
+      </span>
+      <!--v-if-->
+    </a>
+  </div>
+  <div
+    class="cursor-pointer font-semibold text-base leading-5 px-4 transition ease-in-out duration-300 relative h-full flex items-center navigation__link"
+  >
+    <a
+      class="h-full flex items-center"
+    >
+      <span
+        class=""
+      >
+        Websites
+      </span>
+      <!--v-if-->
+    </a>
+  </div>
+  <div
+    class="cursor-pointer font-semibold text-base leading-5 px-4 transition ease-in-out duration-300 relative h-full flex items-center navigation__link"
+  >
+    <a
+      class="h-full flex items-center"
+    >
+      <span
+        class=""
+      >
+        Full Site Check
+      </span>
+      <!--v-if-->
+    </a>
+  </div>
+  <div
+    class="cursor-pointer font-semibold text-base leading-5 px-4 transition ease-in-out duration-300 relative h-full flex items-center navigation__link"
+  >
+    <a
+      class="h-full flex items-center"
+    >
+      <span
+        class=""
+      >
+        Metrics
+      </span>
+      <!--v-if-->
+    </a>
+  </div>
+  <div
+    class="cursor-pointer font-semibold text-base leading-5 px-4 transition ease-in-out duration-300 relative h-full flex items-center navigation__link"
+  >
+    <a
+      class="h-full flex items-center"
+    >
+      <span
+        class=""
+      >
+        Pages
+      </span>
+      <!--v-if-->
+    </a>
+  </div>
+  <div
+    class="cursor-pointer font-semibold text-base leading-5 px-4 transition ease-in-out duration-300 relative h-full flex items-center navigation__link"
+  >
+    <a
+      class="h-full flex items-center"
+    >
+      <span
+        class=""
+      >
+        Alerts
+      </span>
+      <!--v-if-->
+    </a>
+  </div>
+  
+</nav>
+`;
+
+exports[`App Navigation component > Mount AppNavigation component without User 1`] = `
+<nav
+  class="flex-auto w-full justify-start flex items-center h-16 text-app-text antialiased"
+  role="navigation"
+>
+  
+  <div
+    class="cursor-pointer font-semibold text-base leading-5 px-4 transition ease-in-out duration-300 relative h-full flex items-center navigation__link"
+  >
+    <a
+      class="h-full flex items-center"
+    >
+      <span
+        class=""
+      >
+        Dashboard
+      </span>
+      <!--v-if-->
+    </a>
+  </div>
+  <div
+    class="cursor-pointer font-semibold text-base leading-5 px-4 transition ease-in-out duration-300 relative h-full flex items-center navigation__link"
+  >
+    <a
+      class="h-full flex items-center"
+    >
+      <span
+        class=""
+      >
+        Servers
+      </span>
+      <!--v-if-->
+    </a>
+  </div>
+  <div
+    class="cursor-pointer font-semibold text-base leading-5 px-4 transition ease-in-out duration-300 relative h-full flex items-center navigation__link"
+  >
+    <a
+      class="h-full flex items-center"
+    >
+      <span
+        class=""
+      >
+        Websites
+      </span>
+      <!--v-if-->
+    </a>
+  </div>
+  <div
+    class="cursor-pointer font-semibold text-base leading-5 px-4 transition ease-in-out duration-300 relative h-full flex items-center navigation__link"
+  >
+    <a
+      class="h-full flex items-center"
+    >
+      <span
+        class=""
+      >
+        Full Site Check
+      </span>
+      <!--v-if-->
+    </a>
+  </div>
+  <div
+    class="cursor-pointer font-semibold text-base leading-5 px-4 transition ease-in-out duration-300 relative h-full flex items-center navigation__link"
+  >
+    <a
+      class="h-full flex items-center"
+    >
+      <span
+        class=""
+      >
+        Metrics
+      </span>
+      <!--v-if-->
+    </a>
+  </div>
+  <div
+    class="cursor-pointer font-semibold text-base leading-5 px-4 transition ease-in-out duration-300 relative h-full flex items-center navigation__link"
+  >
+    <a
+      class="h-full flex items-center"
+    >
+      <span
+        class=""
+      >
+        Pages
+      </span>
+      <!--v-if-->
+    </a>
+  </div>
+  <div
+    class="cursor-pointer font-semibold text-base leading-5 px-4 transition ease-in-out duration-300 relative h-full flex items-center navigation__link"
+  >
+    <a
+      class="h-full flex items-center"
+    >
+      <span
+        class=""
+      >
+        Alerts
+      </span>
+      <!--v-if-->
+    </a>
+  </div>
+  
+</nav>
+`;
