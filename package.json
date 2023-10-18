@@ -1,6 +1,6 @@
 {
   "name": "@webpros/tsxappheadervue",
-  "version": "3.0.13",
+  "version": "1.0.0",
   "description": "AppHeader for 360 as VuePlugin",
   "author": "Sascha Fuchs (sascha.fuchs@webpros.com)",
   "contributors": [
@@ -18,7 +18,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/leankoala-gmbh/tsxAppHeader.git"
+    "url": "https://github.com/leankoala-gmbh/appheadervue.git"
   },
   "scripts": {
     "dev": "vite",
