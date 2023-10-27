@@ -69,7 +69,7 @@ const { clickLink, labelStyle } = useLinkHelper(props.usage)
             v-for="(entry, index) in navEntries"
             :key="index"
             class="mx-2 my-1 px-2 py-2 text-sm cursor-pointer text-dropdown-text hover:bg-dropdown-hoverBackground hover:text-dropdown-hoverText transition ease-in-out duration-150  flex items-center rounded"
-            @click.stop="clickLink(entry)"
+            @click.stop="clickLink(entry, $event)"
           >
             <IconsUserMenu
               v-if="entry.icon"

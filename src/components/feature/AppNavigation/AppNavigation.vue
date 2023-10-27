@@ -42,7 +42,7 @@ const navigation = computed(() => {
         {'navigation__link--active shadow-md': entry.isActive || false},
       ]"
     >
-      <a class="h-full flex items-center" @click="clickLink(entry)">
+      <a class="h-full flex items-center" @click="clickLink(entry, $event)">
         <span>{{ translator(entry.id) }}</span>
         <span
           v-if="entry.label"

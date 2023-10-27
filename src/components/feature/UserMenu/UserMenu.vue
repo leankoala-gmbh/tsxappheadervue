@@ -108,7 +108,7 @@ const user = computed(() => {
               :class="[
                 feature.current >= feature.threshold ? 'bg-red-100 text-red-700' : ''
               ]"
-              @click="clickLink({id: `feature-${feature.name}`})"
+              @click="clickLink({id: `feature-${feature.name}`}, $event)"
             >
               <span>{{ t(feature.name) }}</span>
               <span>{{ t('countOf', {c: String(feature.current), m: String(feature.max)}) }}</span>
@@ -131,7 +131,7 @@ const user = computed(() => {
           <a
             v-if="item.type === 'link'"
             class="py-2 my-1 mx-1 px-2 text-sm cursor-pointer text-dropdown-text hover:bg-dropdown-hoverBackground hover:text-dropdown-hoverText transition ease-in-out duration-150  flex items-center rounded w-full"
-            @click.stop="clickLink(item)"
+            @click.stop="clickLink(item, $event)"
           >
             <IconsUserMenu
               v-if="item.icon"

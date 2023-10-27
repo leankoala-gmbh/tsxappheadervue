@@ -44,9 +44,10 @@ export const defaultNavigation = {
     },
     {
       id: 'blocklists',
-      path: '/sitecheck/blocklist/',
-      searchPath: '/sitecheck/blocklist',
-      application: 'fullsitecheck',
+      path: '/n3/blocklist',
+      searchPath: '/n3/blocklist',
+      searchPathRegEx: '^/n3/blocklist',
+      application: 'foundation',
       events: {
         upsell: {
           action: 'openContentScreen',
@@ -109,9 +110,9 @@ export const defaultNavigation = {
     {
       id: 'profile',
       icon: 'profile',
-      path:'/sitecheck/user/',
-      searchPath: '/sitecheck/user',
-      application: 'fullsitecheck',
+      path:'/n3/user',
+      searchPath: '/n3/user',
+      application: 'foundation',
       type: 'link'
     },
     {
@@ -129,9 +130,9 @@ export const defaultNavigation = {
     {
       id: 'licenseManagement',
       icon: 'licenseManagement',
-      path: '/sitecheck/user/license/',
-      searchPath: '/sitecheck/user/license',
-      application: 'fullsitecheck',
+      path: '/n3/user/license',
+      searchPath: '/n3/user/license',
+      application: 'foundation',
       type: 'link'
     },
     {

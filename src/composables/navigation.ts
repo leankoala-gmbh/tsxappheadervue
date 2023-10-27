@@ -10,7 +10,7 @@ export function useLinkHelper (usage: TApplication) {
 
   const isAbsoluteUrl = (url: string) => url.match(/^(http|mailto|tel)/)
 
-  const clickLink = (entry: IConfigNavigationDetails) => {
+  const clickLink = (entry: IConfigNavigationDetails, event: any) => {
     let response
     if (entry.sendEvent) {
       response = entry.sendEvent
@@ -24,17 +24,17 @@ export function useLinkHelper (usage: TApplication) {
       const destination = entry.path
         ? usage === entry.application
           ? 'internal'
-          : 'external'
+          : entry.application
         : null
 
-      response = cleanObj({ action: 'click', id: entry.id, path, url, target, destination })
+      response = cleanObj({ action: 'click', id: entry.id, path, url, target, destination, withMetaKey: event.metaKey })
     }
 
     window.mitt.emit('tsxAppHeader', response)
   }
 
-  const customLink = (action: string, payload: any) => {
-    window.mitt.emit('tsxAppHeader', { action, ...cleanObj(payload) })
+  const customLink = (action: string, payload: any, event: any) => {
+    window.mitt.emit('tsxAppHeader', { action, withMetaKey: event.metaKey, ...cleanObj(payload) })
   }
 
   const labelStyle = (entry: IConfigNavigationDetails) => {
