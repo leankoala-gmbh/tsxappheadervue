@@ -44,9 +44,9 @@ export const defaultNavigation = {
     },
     {
       id: 'blocklists',
-      path: '/n3/blocklist',
-      searchPath: '/n3/blocklist',
-      searchPathRegEx: '^/n3/blocklist',
+      path: '/n3/blocklists',
+      searchPath: '/n3/blocklists',
+      searchPathRegEx: '^/n3/blocklists',
       application: 'foundation',
       events: {
         upsell: {
