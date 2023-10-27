@@ -45,7 +45,6 @@ export const defaultNavigation = {
     {
       id: 'blocklists',
       path: '/n3/blocklists',
-      searchPath: '/n3/blocklists',
       searchPathRegEx: '^/n3/blocklists',
       application: 'foundation',
       events: {
