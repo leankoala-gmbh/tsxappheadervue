@@ -21,7 +21,11 @@ export function useLinkHelper (usage: TApplication) {
         : null
       const target = url && entry.newTab ? '_blank' : null
       const path = !url && entry.path ? entry.path : null
-      const destination = entry.application
+      const destination = entry.path
+        ? usage === entry.application
+          ? 'internal'
+          : entry.application
+        : null
 
       response = cleanObj({ action: 'click', id: entry.id, path, url, target, destination, withMetaKey: event.metaKey })
     }
