@@ -3,10 +3,10 @@ import { TApplication } from './../types/general.interfaces'
 import { IConfigNavigationDetails } from '@/types/general.interfaces'
 
 const cleanObj = (obj: any) => Object.entries(obj).reduce((a, [k, v]) => (v ? (a[k]=v, a) : a), {})
-
+const clickCache = ref('')
 
 export function useLinkHelper (usage: TApplication) {
-  const clickCache = ref('')
+
 
   const isAbsoluteUrl = (url: string) => url.match(/^(http|mailto|tel)/)
 

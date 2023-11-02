@@ -149,7 +149,7 @@ export const defaultNavigation = {
         upsell: {
           action: 'openContentScreen',
           type: 'marketing',
-          label: 'Business',
+          label: 'icon',
           title: 'youHaveDiscoveredANewFeature',
           contentId: 'customer.360.pro.api-keys'
         }

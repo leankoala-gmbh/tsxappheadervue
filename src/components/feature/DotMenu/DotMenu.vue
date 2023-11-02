@@ -77,9 +77,11 @@ const isBreak = computed(() => props.navigationBreakpoint
       <MenuItems
         class="origin-top-right absolute left-2 top-[66px] w-72 rounded-md shadow-lg bg-dropdown-background ring-1 ring-black ring-opacity-5 focus:outline-none overflow-hidden py-2"
       >
-        <div
+        <MenuItem
           v-for="(item, index) in dotMenu"
+          v-slot="{ close }"
           :key="index"
+          as="div"
           class="flex px-2 text-dropdown-text"
           :class="[
             {'hover:bg-dropdown-hoverBackground hover:text-dropdown-hoverText cursor-pointer transition ease-in-out duration-150 rounded' : item.type === 'link'},
@@ -110,9 +112,10 @@ const isBreak = computed(() => props.navigationBreakpoint
               :class="[
                 item.isSub ? 'dotNav__sub' : ''
               ]"
+              @close="close"
             />
           </div>
-        </div>
+        </MenuItem>
       </MenuItems>
     </transition>
   </Menu>

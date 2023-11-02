@@ -2,7 +2,7 @@
 import { Icon } from '@iconify/vue'
 import { translator } from '@/composables/translator'
 import { IConfigNavigationDetails, TApplication } from '@/types/general.interfaces'
-import { Menu, MenuButton, MenuItems } from '@headlessui/vue'
+import { Menu, MenuButton, MenuItems, MenuItem } from '@headlessui/vue'
 import IconsUserMenu from '@/components/pure/IconsUserMenu/IconsUserMenu.vue'
 
 const props = defineProps({
@@ -25,6 +25,11 @@ const props = defineProps({
 })
 
 const { clickLink, labelStyle } = useLinkHelper(props.usage)
+
+const clickHandler = (entry: any, $event: any, close: any) => {
+  clickLink(entry, $event)
+  close()
+}
 </script>
 
 <template>
@@ -64,12 +69,15 @@ const { clickLink, labelStyle } = useLinkHelper(props.usage)
         v-if="navEntries.length"
         class="origin-top-right absolute right-0 top-[55px] rounded-md shadow-lg  bg-dropdown-background ring-1 ring-black ring-opacity-5 focus:outline-none w-64 py-2"
       >
-        <div>
+        <MenuItem
+          v-slot="{ close }"
+          as="div"
+        >
           <a
             v-for="(entry, index) in navEntries"
             :key="index"
             class="mx-2 my-1 px-2 py-2 text-sm cursor-pointer text-dropdown-text hover:bg-dropdown-hoverBackground hover:text-dropdown-hoverText transition ease-in-out duration-150  flex items-center rounded"
-            @click.stop="clickLink(entry, $event)"
+            @click.stop="clickHandler(entry, $event, close)"
           >
             <IconsUserMenu
               v-if="entry.icon"
@@ -103,7 +111,7 @@ const { clickLink, labelStyle } = useLinkHelper(props.usage)
               <span v-else>{{ t(entry.label) }}</span>
             </span>
           </a>
-        </div>
+        </MenuItem>
       </MenuItems>
     </transition>
   </Menu>

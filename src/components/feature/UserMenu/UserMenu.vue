@@ -3,7 +3,7 @@ import { Icon } from '@iconify/vue'
 import { useLinkHelper } from '@/composables/navigation'
 import { translator } from '@/composables/translator'
 import { IConfigNavigationDetails, TApplication } from '@/types/general.interfaces'
-import { Menu, MenuButton, MenuItems } from '@headlessui/vue'
+import { Menu, MenuButton, MenuItems, MenuItem } from '@headlessui/vue'
 import IconsUserMenu from '@/components/pure/IconsUserMenu/IconsUserMenu.vue'
 
 const props = defineProps({
@@ -25,7 +25,7 @@ const props = defineProps({
   }
 })
 
-const { clickLink, labelStyle } = useLinkHelper(props.usage)
+const { clickLink, labelStyle, setActiveLink } = useLinkHelper(props.usage)
 
 const userPlan = computed(()=> {
   return props.userDetails.plan.split(' ')
@@ -50,6 +50,10 @@ const user = computed(() => {
   }
 })
 
+const clickHandler = (entry: any, $event: any, close: any) => {
+  clickLink(entry, $event)
+  close()
+}
 </script>
 
 <template>
@@ -82,12 +86,14 @@ const user = computed(() => {
         v-if="navEntries.length"
         class="origin-top-right absolute right-0 top-[55px] rounded-md shadow-lg bg-dropdown-background ring-1 ring-black ring-opacity-5 focus:outline-none w-[340px] pb-2"
       >
-        <div
+        <MenuItem
           v-for="item in navEntries"
+          v-slot="{ close }"
           :key="item.id"
+          as="div"
           class="flex text-dropdown-text px-2"
           :class="[
-            item.isActive ? 'bg-gray-200': '',
+
             item.type === 'seperator' ? 'border-b border-gray-200 h-1 py-0' : '',
           ]"
         >
@@ -131,7 +137,10 @@ const user = computed(() => {
           <a
             v-if="item.type === 'link'"
             class="py-2 my-1 mx-1 px-2 text-sm cursor-pointer text-dropdown-text hover:bg-dropdown-hoverBackground hover:text-dropdown-hoverText transition ease-in-out duration-150  flex items-center rounded w-full"
-            @click.stop="clickLink(item, $event)"
+            :class="[
+              setActiveLink(item) ? 'bg-gray-200': '',
+            ]"
+            @click.stop="clickHandler(item, $event, close)"
           >
             <IconsUserMenu
               v-if="item.icon"
@@ -154,7 +163,7 @@ const user = computed(() => {
               <span v-else>{{ t(item.label) }}</span>
             </span>
           </a>
-        </div>
+        </MenuItem>
       </MenuItems>
     </transition>
   </Menu>

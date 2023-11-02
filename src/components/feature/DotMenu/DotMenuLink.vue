@@ -2,6 +2,8 @@
 import { Icon } from '@iconify/vue'
 import { IConfigNavigationDetails, TApplication } from '@/types/general.interfaces'
 
+const emit = defineEmits(['close'])
+
 const props = defineProps({
   details: {
     type: Object as () => IConfigNavigationDetails,
@@ -19,12 +21,17 @@ const props = defineProps({
 
 const { clickLink, labelStyle } = useLinkHelper(props.usage)
 
+const clickHandler = (entry: any, $event: any) => {
+  clickLink(entry, $event)
+  emit('close')
+}
+
 </script>
 
 <template>
   <a
     class="text-sm flex-auto flex items-center"
-    @click.stop="clickLink(details)"
+    @click.stop="clickHandler(details, $event)"
   >
     {{ translator(details.id) }}
     <span

@@ -2,7 +2,7 @@
 import AppHeader from './components/feature/AppHeader/AppHeader.ce.vue'
 import mitt from 'mitt'
 
-const userPlan = 'lite'
+const userPlan = 'pro'
 const partnerType = 'standalone'
 
 const userDetails = JSON.stringify({
@@ -42,7 +42,7 @@ const conditionPro = planConditions(userPlan, 'pro')
 const conditionTrial = planConditions(userPlan, 'trial')
 
 const userApiKeysDefault = {
-  label: conditionBusiness && 'Business',
+  label: conditionBusiness && 'icon',
   event: conditionBusiness && 'upsell'
 }
 
@@ -118,6 +118,11 @@ window.mitt = window.mitt || mitt()
 
 window.mitt.on('tsxAppHeader', (payload) => {
   console.log('tsxAppHeader', payload)
+  switch (payload.action) {
+    case 'click':
+      window.history.replaceState({}, '', payload.path)
+      break
+  }
 })
 </script>
 
