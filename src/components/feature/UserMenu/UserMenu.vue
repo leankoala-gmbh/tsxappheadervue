@@ -51,8 +51,9 @@ const user = computed(() => {
 })
 const displayableFeatures = computed(() => {
   return props.userDetails.plan === 'trial'
-    ? props.userDetails.features.map((feature:any) =>
-      ({ ...feature, max: '∞' }))
+    ? props.userDetails.features.map((feature:any) => feature.name !== 'blocklistIpChecks'
+      ? ({ ...feature, max: '∞' })
+      : feature)
     : props.userDetails.features
 })
 
