@@ -49,6 +49,13 @@ const user = computed(() => {
     email: email.value
   }
 })
+const displayableFeatures = computed(() => {
+  return props.userDetails.plan === 'trial'
+    ? props.userDetails.features.map((feature:any) =>
+      ({ ...feature, max: '∞' }))
+    : props.userDetails.features
+})
+
 
 const clickHandler = (entry: any, $event: any, close: any) => {
   clickLink(entry, $event)
@@ -108,7 +115,7 @@ const clickHandler = (entry: any, $event: any, close: any) => {
             class="flex gap-1 flex-col w-full px-2"
           >
             <div
-              v-for="(feature, index) in userDetails.features"
+              v-for="(feature, index) in displayableFeatures"
               :key="index"
               class="rounded px-2 py-1 flex justify-between items-center text-sm cursor-pointer"
               :class="[
