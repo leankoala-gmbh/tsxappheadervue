@@ -61,7 +61,7 @@ export const defaultNavigation = {
       id: 'fullSiteCheck',
       path: '/n3/crawler/',
       searchPathRegEx: '^/n3/crawler',
-      application: 'fullsitecheck',
+      application: 'foundation',
       events: {
         upsell: {
           action: 'openContentScreen',
