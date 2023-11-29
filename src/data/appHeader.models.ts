@@ -59,9 +59,9 @@ export const defaultNavigation = {
     },
     {
       id: 'fullSiteCheck',
-      path: '/sitecheck/crawler/',
-      searchPath: '/sitecheck/crawler',
-      searchPathRegEx: '^/sitecheck/crawler/.*',
+      path: '/n3/crawler/',
+      searchPath: '/n3/crawler',
+      searchPathRegEx: '^/n3/crawler/.*',
       application: 'fullsitecheck',
       events: {
         upsell: {
