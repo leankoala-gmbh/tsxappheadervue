@@ -41,8 +41,9 @@ const navigation = computed(() => {
       :class="[
         {'navigation__link--active shadow-md': entry.isActive || false},
       ]"
+      @click="clickLink(entry, $event)"
     >
-      <a class="h-full flex items-center" @click="clickLink(entry, $event)">
+      <a class="h-full flex items-center">
         <span>{{ translator(entry.id) }}</span>
         <span
           v-if="entry.label"
