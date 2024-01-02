@@ -49,14 +49,6 @@ const user = computed(() => {
     email: email.value
   }
 })
-const displayableFeatures = computed(() => {
-  return props.userDetails.plan === 'trial'
-    ? props.userDetails.features.map((feature:any) => feature.name !== 'blocklistIpChecks'
-      ? ({ ...feature, max: '∞' })
-      : feature)
-    : props.userDetails.features
-})
-
 
 const clickHandler = (entry: any, $event: any, close: any) => {
   clickLink(entry, $event)
@@ -116,7 +108,7 @@ const clickHandler = (entry: any, $event: any, close: any) => {
             class="flex gap-1 flex-col w-full px-2"
           >
             <div
-              v-for="(feature, index) in displayableFeatures"
+              v-for="(feature, index) in userDetails.features"
               :key="index"
               class="rounded px-2 py-1 flex justify-between items-center text-sm cursor-pointer"
               :class="[
@@ -125,7 +117,12 @@ const clickHandler = (entry: any, $event: any, close: any) => {
               @click="clickLink({id: `feature-${feature.name}`}, $event)"
             >
               <span>{{ t(feature.name) }}</span>
-              <span>{{ t('countOf', {c: String(feature.current), m: String(feature.max)}) }}</span>
+              <span>{{ t('countOf',
+                         { c: String(feature.current),
+                           m: String(userDetails.plan) === 'trial' && feature.name !== 'blocklistIpChecks'
+                             ? '∞'
+                             : String(feature.max)})
+              }}</span>
             </div>
           </div>
           <div
