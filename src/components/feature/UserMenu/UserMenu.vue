@@ -117,7 +117,12 @@ const clickHandler = (entry: any, $event: any, close: any) => {
               @click="clickLink({id: `feature-${feature.name}`}, $event)"
             >
               <span>{{ t(feature.name) }}</span>
-              <span>{{ t('countOf', {c: String(feature.current), m: String(feature.max)}) }}</span>
+              <span>{{ t('countOf',
+                         { c: String(feature.current),
+                           m: String(userDetails.plan) === 'trial' && feature.name !== 'blocklistIpChecks'
+                             ? '∞'
+                             : String(feature.max)})
+              }}</span>
             </div>
           </div>
           <div
