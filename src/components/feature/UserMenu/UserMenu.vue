@@ -119,7 +119,7 @@ const clickHandler = (entry: any, $event: any, close: any) => {
               <span>{{ t(feature.name) }}</span>
               <span>{{ t('countOf',
                          { c: String(feature.current),
-                           m: String(userDetails.plan) === 'trial' && feature.name !== 'blocklistIpChecks'
+                           m: String(userDetails.plan).toLowerCase() === 'trial' && feature.name !== 'blocklistIpChecks'
                              ? '∞'
                              : String(feature.max)})
               }}</span>
