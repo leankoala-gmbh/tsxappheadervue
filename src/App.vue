@@ -9,7 +9,7 @@ const userDetails = JSON.stringify({
   avatar: 'https://s.gravatar.com/avatar/f4a3c0de0d803cb634c2dc97647215a6?s=480&r=pg&d=https%3A%2F%2cdn.auth0.com&2Favatars%2Fvv.png',
   email: 'luke.skywalker@webprosss.com',
   name: 'Sascha Fuchs',
-  plan: 'trial',
+  plan: 'Trial',
   features: [
     {
       name: 'servers',
