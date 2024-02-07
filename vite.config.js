@@ -61,7 +61,7 @@ export default defineConfig({
     // },
     cssCodeSplit: false,
     rollupOptions: {
-      external: Object.keys(pkg.dependencies || {}),
+      // external: Object.keys(pkg.dependencies || {}),
 
       output: {
         // globals: {
