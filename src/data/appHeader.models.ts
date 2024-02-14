@@ -81,8 +81,8 @@ export const defaultNavigation = {
     },
     {
       id: 'alerts',
-      path: '/dashboard/overview',
-      searchPath: '^/dashboard/overview',
+      path: '/alerts',
+      searchPath: '^/alert',
       application: 'nixstats'
     }
   ],
