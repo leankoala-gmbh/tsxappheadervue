@@ -82,7 +82,7 @@ export const defaultNavigation = {
     {
       id: 'alerts',
       path: '/alerts',
-      searchPath: '/alert',
+      searchPath: '^/alert',
       application: 'nixstats'
     }
   ],
