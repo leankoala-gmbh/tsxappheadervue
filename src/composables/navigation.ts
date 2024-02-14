@@ -34,7 +34,7 @@ export function useLinkHelper (usage: TApplication) {
   }
 
   const customLink = (action: string, payload: any, event: any) => {
-    window.mitt.emit('tsxAppHeader', { action, withMetaKey: event.metaKey, ...cleanObj(payload) })
+    window.mitt.emit('tsxAppHeader', { action, withMetaKey: event?.metaKey, ...cleanObj(payload) })
   }
 
   const labelStyle = (entry: IConfigNavigationDetails) => {
