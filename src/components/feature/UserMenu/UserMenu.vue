@@ -93,7 +93,6 @@ const clickHandler = (entry: any, $event: any, close: any) => {
           as="div"
           class="flex text-dropdown-text px-2"
           :class="[
-
             item.type === 'seperator' ? 'border-b border-gray-200 h-1 py-0' : '',
           ]"
         >
@@ -107,22 +106,25 @@ const clickHandler = (entry: any, $event: any, close: any) => {
             v-if="item.type === 'accountFeatures' && userDetails.features?.length "
             class="flex gap-1 flex-col w-full px-2"
           >
+            {{ userDetails.plan }}
             <div
               v-for="(feature, index) in userDetails.features"
               :key="index"
               class="rounded px-2 py-1 flex justify-between items-center text-sm cursor-pointer"
               :class="[
-                feature.current >= feature.threshold ? 'bg-red-100 text-red-700' : ''
+                feature.current >= feature.threshold && userDetails.plan.toLowerCase() !== 'trial'? 'bg-red-100 text-red-700' : ''
               ]"
               @click="clickLink({id: `feature-${feature.name}`}, $event)"
             >
               <span>{{ t(feature.name) }}</span>
-              <span>{{ t('countOf',
-                         { c: String(feature.current),
-                           m: String(userDetails.plan).toLowerCase() === 'trial' && feature.name !== 'blocklistIpChecks'
-                             ? '∞'
-                             : String(feature.max)})
-              }}</span>
+              <span>{{ t('countOf',{
+                c: String(feature.current),
+                m: String(userDetails.plan).toLowerCase() === 'trial' && feature.name !== 'blocklistIpChecks'
+                  ? '∞'
+                  : String(feature.max)
+              })
+              }}
+              </span>
             </div>
           </div>
           <div

@@ -13,13 +13,13 @@ const userDetails = JSON.stringify({
   features: [
     {
       name: 'servers',
-      current: 0,
+      current: 11,
       max: 10,
       threshold: 9
     },
     {
       name: 'websites',
-      current: 166,
+      current: 200,
       max: 200,
       threshold: 190
     },
