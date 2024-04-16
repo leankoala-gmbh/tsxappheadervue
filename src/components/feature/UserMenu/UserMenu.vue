@@ -106,7 +106,6 @@ const clickHandler = (entry: any, $event: any, close: any) => {
             v-if="item.type === 'accountFeatures' && userDetails.features?.length "
             class="flex gap-1 flex-col w-full px-2"
           >
-            {{ userDetails.plan }}
             <div
               v-for="(feature, index) in userDetails.features"
               :key="index"
