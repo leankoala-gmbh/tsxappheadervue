@@ -28,6 +28,9 @@ const trigger = () => {
       postChangelog: props.changelogUrls.postChangelog
     })
   })
+  window.mitt.emit('tsxAppHeader', {
+    action: 'showNewestChangelog'
+  })
 }
 </script>
 
