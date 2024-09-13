@@ -44,12 +44,12 @@ const props = defineProps({
     default: '{}'
   },
   changelogUpdates: {
-    type: Boolean,
-    default: false
+    type: String,
+    default: 'false'
   },
   hasChangelog: {
-    type: Boolean,
-    default: false
+    type: String,
+    default: 'false'
   },
   changelogUrls: {
     type: String,
@@ -66,7 +66,6 @@ const props = defineProps({
 })
 
 const appFlags = computed(() => JSON.parse(props.flags))
-
 
 const constructSendEvent = (event: string | IFlagEvent, events: IConfigNavigationEvents) => {
   if (typeof event === 'string') {
@@ -155,6 +154,15 @@ const dotMenuVisibility = computed(() => {
 watch(() => props.currentLanguage, () => {
   setLanguage(props.currentLanguage)
 }, { immediate: true })
+
+const convertHasChangelog = computed(() => {
+  return props.hasChangelog === 'true'
+})
+
+const convertChangelogUpdates = computed(() => {
+  return props.changelogUpdates === 'true'
+})
+
 </script>
 
 <template>
@@ -191,20 +199,20 @@ watch(() => props.currentLanguage, () => {
         class="w-full flex-auto"
       />
       <ChangeLogTrigger
-        v-if="hasChangelog"
-        :changelog-updates="changelogUpdates"
+        v-if="convertHasChangelog"
+        :changelog-updates="convertChangelogUpdates"
         :changelog-urls="JSON.parse(changelogUrls)"
         class="whatsNew"
       />
       <DocsMenu
-        :changelog-updates="changelogUpdates"
+        :changelog-updates="convertChangelogUpdates"
         :nav-entries="appNavigation.documentation"
         :usage="usage"
       />
       <UserMenu
         :nav-entries="appNavigation.user"
         :user-details="appUserDetails"
-        :changelog-updates="changelogUpdates"
+        :changelog-updates="convertChangelogUpdates"
         :usage="usage"
       />
     </div>
