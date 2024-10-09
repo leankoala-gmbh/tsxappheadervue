@@ -155,6 +155,13 @@ export const defaultNavigation = {
       }
     },
     {
+      id: 'statusPage',
+      icon: 'status',
+      path: 'https://status.360monitoring.com/',
+      newTab: true,
+      type: 'link'
+    },
+    {
       id: 'logout',
       icon: 'logout',
       type: 'link'

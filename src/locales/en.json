@@ -23,5 +23,6 @@
   "licenseManagement": "License Management",
   "blocklists": "Blocklists",
   "countOf": "{c} of {m}",
-  "blocklistIpChecks": "Blocklist IP Checks"
+  "blocklistIpChecks": "Blocklist IP Checks",
+  "statusPage": "Status Page"
 }

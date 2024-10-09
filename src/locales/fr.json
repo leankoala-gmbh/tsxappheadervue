@@ -23,5 +23,6 @@
   "licenseManagement": "Gestion des licences",
   "blocklists": "Listes de blocage",
   "countOf": "{c} sur {m}",
-  "blocklistIpChecks": "Blocklist IP Checks"
+  "blocklistIpChecks": "Blocklist IP Checks",
+  "statusPage": "Page d'état"
 }

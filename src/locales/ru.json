@@ -23,5 +23,6 @@
   "licenseManagement": "Управление лицензиями",
   "blocklists": "Списки блокировок",
   "countOf": "{c} из {m}",
-  "blocklistIpChecks": "Blocklist IP Checks"
+  "blocklistIpChecks": "Blocklist IP Checks",
+  "statusPage": "Страница статуса"
 }

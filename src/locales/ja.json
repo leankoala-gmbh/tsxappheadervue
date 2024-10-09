@@ -23,5 +23,6 @@
   "licenseManagement": "ライセンス管理",
   "blocklists": "ブロックリスト",
   "countOf": "{c} / {m}",
-  "blocklistIpChecks": "ブロックリスト IP チェック"
+  "blocklistIpChecks": "ブロックリスト IP チェック",
+  "statusPage": "ステータスページ"
 }
