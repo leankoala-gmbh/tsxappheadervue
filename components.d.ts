@@ -18,8 +18,6 @@ declare module 'vue' {
     IconsBrand: typeof import('./src/components/pure/IconsBrand/IconsBrand.vue')['default']
     IconsDotMenu: typeof import('./src/components/pure/IconsDotMenu/IconsDotMenu.vue')['default']
     IconsUserMenu: typeof import('./src/components/pure/IconsUserMenu/IconsUserMenu.vue')['default']
-    RouterLink: typeof import('vue-router')['RouterLink']
-    RouterView: typeof import('vue-router')['RouterView']
     UserAvatar: typeof import('./src/components/feature/UserAvatar/UserAvatar.vue')['default']
     UserMenu: typeof import('./src/components/feature/UserMenu/UserMenu.vue')['default']
     UserMenuEntry: typeof import('./src/components/feature/UserMenu/UserMenuEntry.vue')['default']
