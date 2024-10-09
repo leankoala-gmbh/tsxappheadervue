@@ -159,7 +159,7 @@ export const defaultNavigation = {
       icon: 'status',
       path: 'https://status.360monitoring.com/',
       newTab: true,
-      type: 'link'
+      type: 'externalLink'
     },
     {
       id: 'logout',

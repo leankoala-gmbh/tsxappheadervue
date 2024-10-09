@@ -40,7 +40,7 @@ export interface IConfigNavigationEvents {
 export type TApplication = 'nixstats' | 'fullsitecheck'
 export interface IConfigNavigationDetails {
   id: string
-  type?: 'link' | 'note' | 'placeholder' | 'seperator' | 'userInfo' | 'planName' | 'accountFeatures'
+  type?: 'link' | 'note' | 'placeholder' | 'seperator' | 'userInfo' | 'planName' | 'accountFeatures' | 'externalLink'
   title?: string
   icon?: string
   path?: string

@@ -141,6 +141,24 @@ const clickHandler = (entry: any, $event: any, close: any) => {
             </div>
           </div>
           <a
+            v-if="item.type === 'externalLink'"
+            class="py-2 my-1 mx-1 px-2 text-sm cursor-pointer text-dropdown-text hover:bg-dropdown-hoverBackground hover:text-dropdown-hoverText transition ease-in-out duration-150  flex items-center rounded w-full"
+            @click.stop="clickHandler(item, $event, close)"
+          >
+            <IconsUserMenu
+              v-if="item.icon"
+              class="w-4 opacity-60"
+              :icon="item.icon"
+            />
+            <span
+              class="ml-2"
+            >{{ translator(item.id) }}</span>
+            <span
+              v-if="item.label"
+              class="ml-2 rounded-full p-[2px] text-xs font-semibold uppercase leading-none relative flex items-center justify-center h-4 w-4"
+              :class="labelStyle(item)"
+            >dsddf</span></a>
+          <a
             v-if="item.type === 'link'"
             class="py-2 my-1 mx-1 px-2 text-sm cursor-pointer text-dropdown-text hover:bg-dropdown-hoverBackground hover:text-dropdown-hoverText transition ease-in-out duration-150  flex items-center rounded w-full"
             :class="[
