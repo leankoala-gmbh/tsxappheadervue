@@ -105,12 +105,17 @@ export const defaultNavigation = {
       id: 'userInfo',
       type: 'userInfo'
     },
+    // {
+    //   id: 'profile',
+    //   icon: 'profile',
+    //   path:'/n3/user',
+    //   searchPath: '/n3/user',
+    //   application: 'foundation',
+    //   type: 'link'
+    // },
     {
       id: 'profile',
       icon: 'profile',
-      path:'/n3/user',
-      searchPath: '/n3/user',
-      application: 'foundation',
       type: 'link'
     },
     {
@@ -125,12 +130,17 @@ export const defaultNavigation = {
       id: 'accountFeatures',
       type: 'accountFeatures'
     },
+    // {
+    //   id: 'licenseManagement',
+    //   icon: 'licenseManagement',
+    //   path: '/n3/user/license',
+    //   searchPath: '/n3/user/license',
+    //   application: 'foundation',
+    //   type: 'link'
+    // },
     {
       id: 'licenseManagement',
       icon: 'licenseManagement',
-      path: '/n3/user/license',
-      searchPath: '/n3/user/license',
-      application: 'foundation',
       type: 'link'
     },
     {
