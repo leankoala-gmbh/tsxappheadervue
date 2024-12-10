@@ -3,7 +3,7 @@ import AppHeader from './components/feature/AppHeader/AppHeader.ce.vue'
 import mitt from 'mitt'
 
 const userPlan = 'pro'
-const partnerType = 'standalone'
+const partnerType = 'platform'
 
 const userDetails = JSON.stringify({
   avatar: 'https://s.gravatar.com/avatar/f4a3c0de0d803cb634c2dc97647215a6?s=480&r=pg&d=https%3A%2F%2cdn.auth0.com&2Favatars%2Fvv.png',
@@ -89,7 +89,12 @@ const flags = {
       apiKeys: userApiKeysDefault,
       licenseManagement: false
     },
-    navigation: navDefault
+    navigation: navDefault,
+    company: {
+      plesk360: false,
+      seperator1: false,
+      pleskNote: false
+    }
   },
   threesixty: {
     user: {

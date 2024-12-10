@@ -1,6 +1,6 @@
 {
   "name": "@webpros/tsxappheadervue",
-  "version": "1.3.0",
+  "version": "1.3.1",
   "description": "AppHeader for 360 as VuePlugin",
   "author": "Sascha Fuchs (sascha.fuchs@webpros.com)",
   "contributors": [

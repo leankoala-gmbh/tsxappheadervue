@@ -152,7 +152,9 @@ const dotMenuVisibility = computed(() => {
 
 
 watch(() => props.currentLanguage, () => {
-  setLanguage(props.currentLanguage)
+  setLanguage(props.currentLanguage?.length && props.currentLanguage !== 'undefined'
+    ? props.currentLanguage
+    : 'en')
 }, { immediate: true })
 
 const convertHasChangelog = computed(() => {
