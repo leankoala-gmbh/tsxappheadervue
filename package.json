@@ -1,17 +1,17 @@
 {
   "name": "@webpros/tsxappheadervue",
-  "version": "1.4.0",
+  "version": "1.4.1",
   "description": "AppHeader for 360 as VuePlugin",
   "author": "Sascha Fuchs (sascha.fuchs@webpros.com)",
   "contributors": [
-    "Jorge Flores",
-    "Viktor Vogel"
+    "Jorge Flores <jorge.flores@webpros.com>",
+    "Viktor Vogel <viktor.vogel@webpros.com>"
   ],
   "main": "dist/tsxAppHeader.js",
   "style": "src/assets/colors.css",
   "license": "MIT",
   "engines": {
-    "node": "22.x"
+    "node": ">=22"
   },
   "publishConfig": {
     "registry": "https://registry.npmjs.org/"
@@ -40,8 +40,8 @@
     "@headlessui/vue": "^1.7.23",
     "@iconify/vue": "^3.2.1",
     "@tailwindcss/container-queries": "^0.1.1",
-    "@vueuse/core": "^12.4.0",
-    "@vueuse/integrations": "^12.4.0",
+    "@vueuse/core": "^12.5.0",
+    "@vueuse/integrations": "^12.5.0",
     "axios": "^0.27.2",
     "container-query-polyfill": "^1.0.2",
     "mitt": "^3.0.1",
@@ -50,10 +50,10 @@
   },
   "devDependencies": {
     "@eslint/eslintrc": "^3.2.0",
-    "@eslint/js": "^9.18.0",
+    "@eslint/js": "^10.0.0",
+    "@types/lodash": "^4.17.14",
     "@typescript-eslint/eslint-plugin": "^7.18.0",
     "@typescript-eslint/parser": "^7.18.0",
-    "@types/lodash": "^4.17.14",
     "@vitejs/plugin-vue": "^5.2.1",
     "@vue/eslint-config-standard": "^8.0.1",
     "@vue/eslint-config-typescript": "^11.0.3",
@@ -61,7 +61,7 @@
     "autoprefixer": "^10.4.20",
     "c8": "^10.1.3",
     "cssnano": "^6.1.2",
-    "eslint": "^9.18.0",
+    "eslint": "^9.19.0",
     "eslint-config-prettier": "^9.1.0",
     "eslint-import-resolver-typescript": "^3.7.0",
     "eslint-plugin-import": "^2.31.0",
@@ -79,9 +79,9 @@
     "typescript": "^5.7.3",
     "unplugin-auto-import": "^0.19.0",
     "unplugin-vue-components": "^0.26.0",
-    "vite": "^6.0.7",
-    "vite-plugin-vue-devtools": "^7.7.0",
-    "vitest": "^3.0.1",
+    "vite": "^6.0.11",
+    "vite-plugin-vue-devtools": "^7.7.1",
+    "vitest": "^3.0.4",
     "wait-on": "^8.0.2"
   }
 }

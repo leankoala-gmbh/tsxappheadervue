@@ -5,7 +5,7 @@ A whitelabel application header as a Vue web component
 
 For Javascript frontends
 ```shell
-npm i @webpros/tsxappheader
+npm i @webpros/tsxappheadervue
 ```
 
 **Alternative with a CDN**
